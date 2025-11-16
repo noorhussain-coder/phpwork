@@ -64,6 +64,9 @@ $videos = ($result && $result->num_rows > 0)
 <body class="bg-light py-5">
 
 <div class="container">
+       <div>
+    <a href="../index.php">Home</a>
+  </div>
     <h2 class="text-center mb-4">🎬 Manage Videos</h2>
 
     <div class="text-end mb-3">

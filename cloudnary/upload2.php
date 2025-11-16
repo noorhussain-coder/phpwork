@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['video'])) {
             $result = $upload->upload($file['tmp_name'], [
                 'resource_type' => 'video',
                 // 'folder' => 'awareness_videos'
-                // 'folder' => 'videos'
+                'folder' => 'videos'
             ]);
 
             $videoUrl = $result['secure_url'];
@@ -64,6 +64,9 @@ if ($videoUrl) {
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light py-5">
+      <div>
+    <a href="../index.php">Home</a>
+  </div>
   <div class="container">
     <div class="card mx-auto p-4 shadow" style="max-width: 500px;">
       <h3 class="text-center mb-4">📤 Upload New Video</h3>

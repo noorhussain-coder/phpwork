@@ -22,6 +22,9 @@ $users = ($result && $result->num_rows > 0)
 
 <body class="bg-light py-5">
 <div class="container">
+          <div>
+    <a href="../index.php">Home</a>
+  </div>
     <h2 class="text-center mb-4">👥 All Users</h2>
 
     <div class="card shadow p-3">

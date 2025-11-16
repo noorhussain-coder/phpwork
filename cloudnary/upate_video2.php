@@ -98,6 +98,9 @@ if (isset($_POST['submit'])) {
 
 <body class="bg-light py-5">
   <div class="container">
+          <div>
+    <a href="../index.php">Home</a>
+  </div>
     <div class="card mx-auto p-4 shadow" style="max-width: 500px;">
       <h3 class="text-center mb-4">✏️ Edit Video</h3>
 
