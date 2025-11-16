@@ -109,7 +109,7 @@ $videos = ($result && $result->num_rows > 0)
                             <td>
                                 <!-- <a href="update_video.php?id=<?= $video['id'] ?>" class="btn btn-primary btn-sm">Edit</a> -->
                                 <a href="upate_video2.php?id=<?= $video['id'] ?>" class="btn btn-primary btn-sm">Edit</a>
-                               <?php echo $video['id']?>
+                             
                                 <a href=" Edit_Video.php?delete_id=<?= $video['id'] ?>"
                                    onclick="return confirm('Are you sure you want to delete this video?');"
                                    class="btn btn-danger btn-sm">
