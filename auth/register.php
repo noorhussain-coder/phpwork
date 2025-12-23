@@ -4,7 +4,11 @@
 include('../configs/database.php');
 if(isset($_POST['register'])){
 extract($_POST);
+$user="SELECT * FROM users ";
+$alluser=$conn->query($user);
 $password=password_hash($password,PASSWORD_DEFAULT);
+if($alluser->num_rows>0){
+
 $sql="INSERT INTO users(username,email,password) VALUES('$username','$email','$password')";
 $result=$conn->query($sql);
 if($result){
@@ -13,6 +17,20 @@ header("Location: login.php");
 }else{
     $_SESSION['error']='error already Access';
 }
+}else{
+ 
+$sql="INSERT INTO users(username,email,password,role) VALUES('$username','$email','$password','admin')";
+$result=$conn->query($sql);
+if($result){
+$_SESSION['success']='Sucessfuly Register user';
+header("Location: login.php");
+}else{
+    $_SESSION['error']='error already Access';
+}   
+}
+
+// $password=password_hash($password,PASSWORD_DEFAULT);
+
 
 
 
